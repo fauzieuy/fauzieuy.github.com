@@ -1,0 +1,20 @@
+
+ <section>
+    <div class="bs-docs-example">
+        <div class="well" style="max-width: 340px; padding: 8px 0;">
+            <ul class="nav nav-list">
+				<li class="nav-header">List Category</li>
+				{% for category in site.categories %}
+ 				<li><label class="tree-toggle">{{ category[0] }}<span class="pull-right">{{ category[1].size }}</span></label>
+ 				  <ul class="nav nav-list tree">
+ 				  	{% for post in category[1] %}
+ 				  	<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+ 				  	{% endfor %}
+ 				  </ul>
+ 				 </li>
+				{% endfor %}
+				</ul>
+ 			</ul>
+ 		</div>
+ 	</div>
+</section>

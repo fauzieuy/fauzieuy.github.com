@@ -1,0 +1,67 @@
+<section>
+      <h2>I'm Fauzi</h2>
+      <div class="media">
+              <a class="pull-left" href="#">
+                <img class="media-object" width="80" height="80" src="/img/zie.jpg" alt="" tile="fauzi">
+              </a>
+              <div class="media-body">
+                <p>I'm a student of Life, web developer and wanna be have a School of Information Technology.</p>
+              </div>
+
+              <ul class="nav pull-left social visible-desktop">
+              {% if site.author.github %}
+                <li>
+                  <a href="https://github.com/{{ site.author.github }}" class="zocial github icon" target="_blank">
+                    <span class="hidden-desktop">Github</span>
+                  </a>
+                </li>
+              {% endif %}
+              {% if site.author.googleplus %}
+                <li>
+                  <a href="https://plus.google.com/{{ site.author.googleplus }}" class="zocial googleplus icon" target="_blank">
+                    <span class="hidden-desktop">Google+</span>
+                  </a>
+                </li>
+              {% endif %}
+                   
+              {% if site.author.twitter %}
+                <li>
+                  <a href="https://twitter.com/{{ site.author.twitter }}" class="zocial twitter icon" target="_blank">
+                  <span class="hidden-desktop">Twitter</span>
+                  </a>
+                </li>
+              {% endif %}
+              <li>
+                  <a href="mailto:fauzieuy@gmail.com" class="zocial email icon" title="contact">
+                    <span class="hidden-desktop">Gmail</span>
+                  </a>
+              </li>                          
+              {% if site.author.facebook %}
+                <li>
+                  <a href="http://www.facebook.com/{{ site.author.facebook }}" class="zocial facebook icon" target="_blank">
+                    <span class="hidden-desktop">Facebook</span>
+                  </a>
+                </li>
+              {% endif %}           
+              {% if site.author.linkedin %}
+                <li>
+                  <a href="http://www.linkedin.com/in/{{ site.author.linkedin }}" class="zocial linkedin icon" target="_blank">
+                    <span class="hidden-desktop">LinkedIn</span>
+                  </a>
+                </li>
+              {% endif %}                    
+              {% if site.author.feedburner %}
+                <li>
+                  <a href="http://feeds.feedburner.com/{{ site.author.feedburner }}" class="zocial rss icon" target="_blank">
+                    <span class="hidden-desktop">FeedBurner</span>
+                  </a>
+                </li>
+              {% endif %}
+            </ul>
+            <br/>
+            <br/>
+            <br/>
+            <span><a href="https://twitter.com/tweet_9in9" class="twitter-follow-button" data-show-count="false">Follow @tweet_9in9</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+       </div>
+</section>

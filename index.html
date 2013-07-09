@@ -1,0 +1,31 @@
+---
+layout: layout
+title: "Welcome To 9in9 Blog"
+---
+ <div class="row">     
+{% for post in site.posts offset: 0 limit: 50 %}
+          
+    <div class="span8 columns">      
+      <div class="posts">
+      <div class="media">
+        <a href="{{ post.url }}" class="pull-left thumbnail">
+            <img border="0"  style="width: 140px; height: auto;" src="/img/posts/{{ post.date | date : '%d-%m-%Y' }}/{{ post.image }}" alt="">
+        </a>
+       <div class="media-body">
+        <h4 class="media-heading"><strong><a href="{{ post.url }}">{{ post.title }}</a></strong></h4>      
+        <p>
+          {{ post.summary }}
+        </p>
+         <p><a href="{{ post.url }}">Read more</a></p>
+		<p>
+          <i class="icon-calendar icon-white"></i> {{ post.date | date_to_long_string }}
+          | <i class="icon-comment icon-white"></i> <a href="http://fauzieuy.github.io{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}"></a></p>     
+		  <p><i class="icon-tags icon-white"></i> Tags :{% for tag in post.tags %} <a href="/tags/{{ tag }}" rel="tooltip" title="View posts tagged with &quot;{{ tag }}&quot;"><span class="label label-info">{{ tag }}</span></a>  {% if forloop.last != true %} {% endif %} {% endfor %}		            
+        </p>
+      </div>
+    </div>    
+	<hr>
+  </div>
+</div>
+{% endfor %}	
+</div> 

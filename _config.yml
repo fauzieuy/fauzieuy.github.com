@@ -1,0 +1,17 @@
+auto: true
+markdown: rdiscount
+pygments: true
+permalink: /blog/:title
+
+
+title :  9in9
+tagline: 
+author :
+  name : Muhammad Fauzi
+  email : fauzieuy@gmail.com
+  github : fauzieuy
+  twitter : fauzigifzi
+  gmail : fauzieuy@gmail.com
+
+
+production_url : http://fauzieuy.github.io

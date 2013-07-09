@@ -1,0 +1,46 @@
+
+<section>
+      <h4>Author</h4>
+      <span>{{ site.author.name }}</span>
+</section>
+
+<section>
+      <h4>Published</h4>
+      <div class="date"><span>{{ page.date | date_to_long_string }}</span></div>
+</section>
+    
+    {% if page.category %}
+<section>
+        <h4>Category</h4>
+        <span class="category">
+          {{ page.category }}
+        </span>
+</section>
+    {% endif %}
+
+    {% unless page.tags == empty %}
+<section>
+        <h4>Tags</h4>
+        <ul class="tag_box">
+          {% for tag in page.tags %} 
+          <li><a href="/tags/{{ tag }}" title="View posts tagged with &quot;{{ tag }}&quot;">{{ tag }}</a></li>
+          {% if forloop.last != true %} {% endif %} {% endfor %} 
+        </ul>
+</section>
+    {% endunless %}
+    
+
+<section>
+    <h4>Comments</h4>
+    <span>
+    <a href="http://fauzieuy.github.io{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.url }}">Comments</a>
+    </span>
+</section>
+
+<section>
+  <h4>Share To :</h4>
+  <span>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="tweet_9in9" data-hashtags="Blog">Tweet</a><g:plusone size="medium"></g:plusone>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</span>
+</section>

@@ -1,0 +1,12 @@
+ <section>
+    <div class="bs-docs-example">
+        <div class="well" style="max-width: 340px; padding: 8px 0;">
+            <ul class="nav nav-list">
+				<li class="nav-header">Last Post</li>
+ 				{% for post in site.posts limit:9 %}
+ 				<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+ 				{% endfor %}
+ 			</ul>
+ 		</div>
+ 	</div>
+</section>
