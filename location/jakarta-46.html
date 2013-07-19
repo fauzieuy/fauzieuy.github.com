@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+ 
+<html>
+<head>
+<link href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+    $('div.form-horizontal').on('click', '#submit-page', function () {
+        var location = $('#selectLocation').val().trim();
+        var type = $('#selectType').val().trim();
+        if (location == 'Choose Location' && type == 'Choose Type') {
+            alert('Please choose location and type');
+        }
+        else if (location == 'Choose Location') {
+            alert('Please choose location');
+        }
+        else if (type == 'Choose Type') {
+            alert('Please choose type');
+        }
+        else {
+            window.location.href = '' + location + '-' + type + '.html';
+        }
+    });
+});
+</script>
+<title>Makelar Rumah - Jakarta 46</title>
+</head>
+<body>
+    <div class="form-horizontal">
+    <div class="control-group">
+        <label class="control-label" for="selectLocation">Location :</label>
+        <div class="controls">
+            <select id="selectLocation">
+                <option value="Choose Location">Choose Location</option>
+                <option value="jakarta">Jakarta</option>
+                <option value="bandung">Bandung</option>
+            </select>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="selectType">Type :</label>
+        <div class="controls">
+            <select id="selectType">
+                <option value="Choose Type">Choose Type</option>
+                <option value="21">21</option>
+                <option value="46">46</option>
+                <option value="72">72</option>
+                <option value="101">101</option>
+            </select>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+<a href="#" class="btn" id="submit-page">submit</a>
+
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h1>Jakarta - Type 46</h1>
+    <div class="row">
+        <div class="span3">rumah 1</div>
+        <div class="span3">rumah 2</div>
+        <div class="span3">rumah 3</div>
+        <div class="span3">rumah 4</div>
+    </div>
+</div>
+</body>
+</html>
