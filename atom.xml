@@ -10,7 +10,7 @@ layout: nil
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>http://fauzieuy.github.io</id>
  <author>
-   <name>Eric Jones</name>
+   <name>Muhammad Fauzi</name>
  </author>
  
  {% for post in site.posts %}
